@@ -37,4 +37,27 @@ handleFormSubmit = event => {
     this.searchMovies(this.state.search);
   };
 
-  
+  render() {
+      return (
+          <Container>
+              <Row>
+                  <Column size="md-4">
+                      <Card 
+                      heading={this.state.result.Title || "Browse Movies"} >
+                          {this.State.result.Title ? (
+                              <MovieInformation
+                              title={this.state.result.Title}
+                              src={this.state.result.Poster}
+                              director={this.state.result.Director}
+                              genre={this.state.result.Genre}
+                              released={this.state.result.Released}
+                        />
+                          ) : (
+                              <h2>No Results</h2>
+                          )}
+                      </Card>
+                  </Column>
+              </Row>
+          </Container>
+      )
+  }
