@@ -57,7 +57,19 @@ handleFormSubmit = event => {
                           )}
                       </Card>
                   </Column>
+                  <Column size="md-6">
+                      <Card heading="Search">
+                          <SearchBox
+                           value={this.state.search}
+                           handleInputChange={this.handleInputChange}
+                           handleFormSubmit={this.handleFormSubmit}
+                         />
+
+                      </Card>
+                  </Column>
               </Row>
           </Container>
       )
   }
+
+  export default ImdbContainer;
