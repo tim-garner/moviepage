@@ -11,7 +11,7 @@ class ImdbContainer extends Component {
     state = {
         result: {},
         search: ""
-    }
+    
 };
 
 componentDidMount() {
@@ -44,7 +44,7 @@ handleFormSubmit = event => {
                   <Column size="md-4">
                       <Card 
                       heading={this.state.result.Title || "Browse Movies"} >
-                          {this.State.result.Title ? (
+                          {this.state.result.Title ? (
                               <MovieInformation
                               title={this.state.result.Title}
                               src={this.state.result.Poster}
@@ -69,7 +69,8 @@ handleFormSubmit = event => {
                   </Column>
               </Row>
           </Container>
-      )
+      );
+                          }
   }
 
   export default ImdbContainer;
