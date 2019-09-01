@@ -23,3 +23,18 @@ searchMovies = query => {
     .then(res => this.setState({ result: res.data}))
     .catch(err => console.log(err));
 };
+
+handleInputChange = event => {
+    const value = event.target.value;
+    const name = event.target.name;
+    this.SetState({
+        [name]: value
+    });
+};
+
+handleFormSubmit = event => {
+    event.preventDefault();
+    this.searchMovies(this.state.search);
+  };
+
+  
